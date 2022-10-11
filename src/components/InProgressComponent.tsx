@@ -25,8 +25,8 @@ const InProgressComponent = (props: Props) => {
         if (ref) ref.scrollIntoView()
     }
     const getProgress = (from, to) => {
-        const beforefrom = new Date(fromUniversityToUTC(from))
-        const beforeto = new Date(fromUniversityToUTC(to))
+        const beforefrom = new Date(from)
+        const beforeto = new Date(to)
         const beforenowToTo = diffDates(currentTime, beforeto)
         const beforetoToFrom = diffDates(beforefrom, beforeto)
         return (beforetoToFrom - beforenowToTo) / beforetoToFrom * 100
@@ -43,9 +43,9 @@ const InProgressComponent = (props: Props) => {
                         return acc.concat(subject.items.map(item => Object.assign({}, item, {subject: modifiedSubject})))
                     }, [])
                     .filter(item => {
-                        const from = new Date(fromUniversityToUTC(item.from))
+                        const from = new Date(item.from)
                         from.setHours(0, 0, 0, 0);
-                        const to = new Date(fromUniversityToUTC(item.to))
+                        const to = new Date(item.to)
                         to.setHours(23, 59, 59, 999);
                         return currentTime.getTime() >= from.getTime() && currentTime.getTime() < to.getTime()
                     }).sort((before, now) =>

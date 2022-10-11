@@ -66,9 +66,9 @@ const ScheduleDayComponent = (props: Props) => {
         fontFamily: ''
     }
     const filterSubject = (subject): any[] => subject.items?.filter(item => {
-        const from = new Date(fromUniversityToUTC(item.from))
+        const from = item.from
         from.setHours(0, 0, 0, 0);
-        const to = new Date(fromUniversityToUTC(item.to))
+        const to = item.to
         to.setHours(23, 59, 59, 999);
         return (diaActual => from || compateTwoDates(diaActual, from)) && (diaActual <= to || compateTwoDates(to, diaActual));
     })

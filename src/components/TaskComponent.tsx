@@ -11,8 +11,8 @@ interface Props {
 const TaskComponent = (props: Props) => {
     const {subject, task, currentTime} = props
     const now = new Date()
-    const to = new Date(fromUniversityToUTC(task.to))
-    const from = new Date(fromUniversityToUTC(task.from))
+    const to = new Date(task.to)
+    const from = new Date(task.from)
     to.setDate(to.getDate() + 1);
     const nowToTo = diffDates(now, to)
     const toToFrom = diffDates(from, to)

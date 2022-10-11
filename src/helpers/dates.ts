@@ -6,7 +6,7 @@ export function fromUniversityToUTC(date: string) {
 
 export function compateTwoDates(date1: Date, date2: Date) {
     // return date1.getUTCFullYear() === date2.getUTCFullYear() && date1.getUTCDate() === date2.getUTCDate() && date1.getUTCMonth() === date2.getUTCMonth();
-    return date1.getFullYear() === date2.getFullYear() && date1.getDate() === date2.getDate() && date1.getMonth() === date2.getMonth();
+    return new Date(date1).getFullYear() === new Date(date2).getFullYear() && new Date(date1).getDate() === new Date(date2).getDate() && new Date(date1).getMonth() === new Date(date2).getMonth();
 }
 
 //https://stackabuse.com/javascript-get-number-of-days-between-dates/

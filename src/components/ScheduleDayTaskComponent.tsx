@@ -8,8 +8,8 @@ import {compateTwoDates, fromUniversityToUTC} from "../helpers/dates";
 
 export const ScheduleDayTaskComponent = (props: any) => {
     const {item, diaActual, lineStyle, today, subject} = props
-    const from = new Date(fromUniversityToUTC(item.from))
-    const to = new Date(fromUniversityToUTC(item.to))
+    const from = item.from
+    const to = item.to
     let hasStartedToday = compateTwoDates(diaActual, from)
     let lastDay = compateTwoDates(diaActual, to)
     let passed = (today.getTime() - to.getTime()) > 0
