@@ -1,0 +1,239 @@
+{
+  "groups": [
+    {
+      "name": "Formació bàsica (60 ECTS)",
+      "assignments": [
+        {
+          "name": "Fonaments de programació",
+          "credits": 6
+        },
+        {
+          "name": "Pràctiques de programació",
+          "credits": 6
+        },
+        {
+          "name": "Administració i gestió d'organitzacions",
+          "credits": 6
+        },
+        {
+          "name": "Àlgebra",
+          "credits": 6
+        },
+        {
+          "name": "Anàlisi matemàtica",
+          "credits": 6
+        },
+        {
+          "name": "Lògica",
+          "credits": 6
+        },
+        {
+          "name": "Estadística",
+          "credits": 6
+        },
+        {
+          "name": "Treball en equip a la xarxa",
+          "credits": 6
+        },
+        {
+          "name": "Fonaments de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Fonaments físics de la informàtica",
+          "credits": 6
+        }
+      ]
+    },
+    {
+      "name": "Formació obligatòria (96 ECTS)",
+      "assignments": [
+        {
+          "name": "Disseny i programació orientada a objectes",
+          "credits": 6
+        },
+        {
+          "name": "Enginyeria del programari",
+          "credits": 6
+        },
+        {
+          "name": "Interacció persona ordinador",
+          "credits": 6
+        },
+        {
+          "name": "Ús de bases de dades",
+          "credits": 6
+        },
+        {
+          "name": "Disseny de bases de dades",
+          "credits": 6
+        },
+        {
+          "name": "Administració de xarxes i sistemes operatius",
+          "credits": 6
+        },
+        {
+          "name": "Competència comunicativa per a professionals de les TIC",
+          "credits": 6
+        },
+        {
+          "name": "Grafs i complexitat",
+          "credits": 6
+        },
+        {
+          "name": "Gestió de projectes",
+          "credits": 6
+        },
+        {
+          "name": "Estructura de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Xarxes i aplicacions Internet",
+          "credits": 6
+        },
+        {
+          "name": "Sistemes distribuïts",
+          "credits": 6
+        },
+        {
+          "name": "Sistemes operatius",
+          "credits": 6
+        },
+        {
+          "name": "Intel·ligència artificial",
+          "credits": 6
+        },
+        {
+          "name": "Idioma modern I: anglès",
+          "credits": 6
+        },
+        {
+          "name": "Idioma modern II: anglès",
+          "credits": 6
+        }
+      ]
+    },
+    {
+      "name": "Formació optativa (72 ECTS)",
+      "assignments": [
+        {
+          "name": "Anàlisi i disseny amb patrons",
+          "credits": 6
+        },
+        {
+          "name": "Aprenentatge computacional",
+          "credits": 6
+        },
+        {
+          "name": "Arquitectura de bases de dades",
+          "credits": 6
+        },
+        {
+          "name": "Arquitectura de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Arquitectures de computadors avançades",
+          "credits": 6
+        },
+        {
+          "name": "Autòmats i gramàtiques",
+          "credits": 6
+        },
+        {
+          "name": "Comerç electrònic",
+          "credits": 6
+        },
+        {
+          "name": "Compiladors",
+          "credits": 6
+        },
+        {
+          "name": "Criptografia",
+          "credits": 6
+        },
+        {
+          "name": "Disseny de xarxes de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Planificació i ús estratègic de SI/TI",
+          "credits": 6
+        },
+        {
+          "name": "Disseny de sistemes operatius",
+          "credits": 6
+        },
+        {
+          "name": "Disseny d'estructures de dades",
+          "credits": 6
+        },
+        {
+          "name": "Enginyeria de requisits",
+          "credits": 6
+        },
+        {
+          "name": "Enginyeria del programari de components i sistemes distribuïts",
+          "credits": 6
+        },
+        {
+          "name": "Estructura de xarxes de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Fonaments de sistemes d'informació",
+          "credits": 6
+        },
+        {
+          "name": "Gestió funcional de serveis SI/TI",
+          "credits": 6
+        },
+        {
+          "name": "Iniciació a les matemàtiques per a l'enginyeria",
+          "credits": 6
+        },
+        {
+          "name": "Iniciativa emprenedora i direcció d'organitzacions",
+          "credits": 6
+        },
+        {
+          "name": "Integració de sistemes d'informació",
+          "credits": 6
+        },
+        {
+          "name": "Mineria de dades",
+          "credits": 6
+        },
+        {
+          "name": "Projecte de desenvolupament del programari",
+          "credits": 12
+        },
+        {
+          "name": "Representació del coneixement",
+          "credits": 6
+        },
+        {
+          "name": "Seguretat en xarxes de computadors",
+          "credits": 6
+        },
+        {
+          "name": "Sistemes encastats",
+          "credits": 6
+        },
+        {
+          "name": "Ús de sistemes d'informació en les organitzacions",
+          "credits": 6
+        },
+        {
+          "name": "Pràctiques en empresa",
+          "credits": 12
+        },
+        {
+          "name": "Treball de final de grau",
+          "credits": 12
+        }
+      ]
+    }
+  ]
+}
