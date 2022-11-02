@@ -7,21 +7,27 @@
       "color": "danger",
       "items": [
         {
-          "task": "PAC1",
-          "from": "23/11/2025",
-          "to": "05/12/2022",
+          "task": "Pràctica 1",
+          "from": "14/10/2022",
+          "to": "9/11/2022",
           "required": true
         },
         {
-          "task": "Pràctica2",
-          "from": "22/12/2022",
-          "to": "04/01/2023",
+          "task": "PAC1",
+          "from": "09/11/2025",
+          "to": "23/11/2022",
+          "required": true
+        },
+        {
+          "task": "Pràctica 2",
+          "from": "23/11/2022",
+          "to": "22/12/2023",
           "required": true
         },
         {
           "task": "PAC2",
-          "from": "09/01/2023",
-          "to": "15/01/2023",
+          "from": "22/01/2023",
+          "to": "09/01/2023",
           "required": true
         },
         {
