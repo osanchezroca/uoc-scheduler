@@ -1,8 +1,9 @@
-import ScheduleDayComponent from "./ScheduleDayComponent";
+import DayCell from "./DayCell";
 import React from "react";
 import {Subject} from "../interfaces/Schedule";
 import {isFirstDayOfMonth} from 'date-fns'
 import MonthInfoComponent from "./MonthInfoComponent";
+import {Box, SimpleGrid} from '@chakra-ui/react'
 
 interface Props {
     subjects: Array<Subject>
@@ -12,12 +13,8 @@ interface Props {
 const ScheduleComponent = (props: Props) => {
     const {subjects, currentTime} = props
     let weeksLength = 19;
-    const acc = {}
-    subjects.map(subject => subject.items.map(item => {
-        return acc[item.from] = new Date(item.from)
-    }))
-    const semesterStartDate = new Date('2022-9-25')
-    const date = new Date('2022-7-31')
+    const semesterStartDate = new Date('2023-9-24')
+    const date = new Date('2023-9-24')
     return (
         <>
             <div className="sticky-top" style={{
@@ -43,10 +40,11 @@ const ScheduleComponent = (props: Props) => {
             </div>
             {[...Array(weeksLength)].map((_, semana) => {
                 return (
-                    <div key={semana} style={{display: "grid", gridTemplateColumns: 'repeat(7, minmax(0, 1fr))'}}>
+                    <SimpleGrid key={semana} columns={7}>
                         {[...Array(7)].map((_, dia) => {
                                 semesterStartDate.setDate(semesterStartDate.getDate() + 1)
                             const currentDate = new Date(semesterStartDate)
+                            const weekDayNumber = currentDate.getDay() || 7
                                 return (
                                     <React.Fragment key={dia}>
                                         {isFirstDayOfMonth(currentDate) ? <>
@@ -57,17 +55,17 @@ const ScheduleComponent = (props: Props) => {
                                             </div>
                                         </> : null}
 
-                                        <div className={'col border-bottom border-dark p-0 m-0'} style={{gridColumn: currentDate.getDay()}}>
-                                            <ScheduleDayComponent
+                                        <Box p={0} m={0} gridColumn={weekDayNumber}>
+                                            <DayCell
                                                 currentTime={currentTime}
-                                                diaActual={new Date(currentDate.toISOString())}
+                                                cellDay={new Date(currentDate.toISOString())}
                                                 subjects={subjects}/>
-                                        </div>
+                                        </Box>
                                     </React.Fragment>
                                 );
                             }
                         )}
-                    </div>
+                    </SimpleGrid>
                 );
             })}
         </>

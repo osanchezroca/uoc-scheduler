@@ -8,7 +8,7 @@ export interface Event {
 export interface Subject {
     abr: string,
     name: string,
-    class?: string,
+    colorScheme?: string,
     color?: string,
     items?: Array<Event>
 }

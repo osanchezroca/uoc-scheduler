@@ -1,238 +1,116 @@
 {
   "subjects": [
     {
-      "abr": "S.O.",
-      "name": "Sistemes operatius",
-      "class": "bg-danger text-shadow",
+      "abr": "CE",
+      "name": "Comerç Electrònic",
+      "colorScheme": "blue",
       "color": "danger",
       "items": [
         {
-          "task": "Pràctica 1",
-          "from": "14/10/2022",
-          "to": "9/11/2022",
-          "required": true
-        },
-        {
-          "task": "PAC1",
-          "from": "09/11/2025",
-          "to": "23/11/2022",
-          "required": true
-        },
-        {
-          "task": "Pràctica 2",
-          "from": "23/11/2022",
-          "to": "22/12/2023",
-          "required": true
-        },
-        {
-          "task": "PAC2",
-          "from": "22/01/2023",
-          "to": "09/01/2023",
-          "required": true
-        },
-        {
-          "task": "Mòdul 1: INTRODUCCIÓ ALS SISTEMES OPERATIUS",
-          "from": "28/09/2022",
-          "to": "04/10/2022"
-        },
-        {
-          "task": "Mòdul 2: EL SISTEMA OPERATIU: UNA MÀQUINA VIRTUAL",
-          "from": "05/10/2022",
-          "to": "25/10/2022"
-        },
-        {
-          "task": "Mòdul 3: LA GESTIÓ DE LA MEMÒRIA",
-          "from": "26/10/2022",
-          "to": "04/11/2022"
-        },
-        {
-          "task": "Mòdul 4: ELS DISPOSITIUS D'ENTRADA/SORTIDA",
-          "from": "05/11/2022",
-          "to": "11/11/2022"
-        },
-        {
-          "task": "Mòdul 5: EL SISTEMA DE FITXERS",
-          "from": "12/11/2022",
-          "to": "22/11/2022"
-        },
-        {
-          "task": "Mòdul 6: LA GESTIÓ DE PROCESSOS",
-          "from": "23/11/2022",
-          "to": "13/12/2022"
-        },
-        {
-          "task": "Mòdul 7: LA CONCURRÈNCIA I LA COMUNICACIÓ",
-          "from": "14/12/2022",
-          "to": "05/01/2023"
-        }
-      ]
-    },
-    {
-      "abr": "COMP",
-      "name": "Compiladors",
-      "class": "bg-info text-shadow",
-      "color": "info",
-      "items": [
-        {
           "task": "PAC 1",
-          "from": "18/10/2022",
-          "to": "08/11/2022",
+          "from": "27/9/2023",
+          "to": "24/10/2023",
+          "required": true
+        },
+        {
+          "task": "PRA 1",
+          "from": "27/9/2023",
+          "to": "5/12/2023",
           "required": true
         },
         {
           "task": "PAC 2",
-          "from": "22/11/2022",
-          "to": "13/12/2022",
+          "from": "25/10/2023",
+          "to": "14/11/2023",
           "required": true
         },
         {
           "task": "PAC 3",
-          "from": "14/12/2022",
-          "to": "02/01/2023",
+          "from": "15/11/2023",
+          "to": "12/12/2023",
           "required": true
         },
         {
-          "task": "Setmana 1 - Pla docent + Instal·lació programari",
-          "from": "28/09/2022",
-          "to": "02/10/2022"
+          "task": "PRA 2",
+          "from": "22/11/2023",
+          "to": "9/1/2024",
+          "required": true
         },
         {
-          "task": "Setmana 2 - Mòdul 1",
-          "from": "03/10/2022",
-          "to": "09/10/2022"
-        },
-        {
-          "task": "Setmana 3 - Mòdul 2 + Repàs",
-          "from": "10/10/2022",
-          "to": "16/10/2022"
-        },
-        {
-          "task": "Setmana 4 - Manual JLex",
-          "from": "17/10/2022",
-          "to": "23/10/2022"
-        },
-        {
-          "task": "Setmana 5 - Mòdul 2 i JLex",
-          "from": "24/10/2022",
-          "to": "30/10/2022"
-        },
-        {
-          "task": "Setmana 6 - Mòdul 2 + JLex",
-          "from": "31/10/2022",
-          "to": "06/11/2022"
-        },
-        {
-          "task": "Setmana 7 - Mòdul 3",
-          "from": "07/11/2022",
-          "to": "13/11/2022"
-        },
-        {
-          "task": "Setmana 8 - CUP",
-          "from": "14/11/2022",
-          "to": "20/11/2022"
-        },
-        {
-          "task": "Setmana 9 - Mòdul 3",
-          "from": "21/11/2022",
-          "to": "27/11/2022"
-        },
-        {
-          "task": "Setmana 10 - Mòdul 3",
-          "from": "28/11/2022",
-          "to": "04/12/2022"
-        },
-        {
-          "task": "Setmana 11 - Mòdul 4 + CUP",
-          "from": "05/12/2022",
-          "to": "11/12/2022"
-        },
-        {
-          "task": "Setmana 12 - Mòdul 4 + CUP",
-          "from": "12/12/2022",
-          "to": "18/12/2022"
-        },
-        {
-          "task": "Setmana 13 - Mòdul 5 + CUP",
-          "from": "19/12/2022",
-          "to": "25/12/2022"
-        },
-        {
-          "task": "Setmana 14 - Mòdul 5",
-          "from": "26/12/2022",
-          "to": "01/01/2023"
-        },
-        {
-          "task": "Preparació per les proves finals",
-          "from": "02/01/2023",
-          "to": "18/01/2023"
+          "task": "PAC 4",
+          "from": "13/12/2023",
+          "to": "9/1/2024",
+          "required": true
         }
       ]
     },
     {
-      "abr": "MIN",
-      "name": "Mineria de dades",
-      "class": "bg-warning text-shadow",
-      "color": "warning",
+      "abr": "ADP",
+      "name": "Anàlisi i Disseny amb Patrons",
+      "colorScheme": "green",
+      "color": "danger",
       "items": [
         {
           "task": "PAC 1",
-          "from": "24/10/2022",
-          "to": "09/11/2022",
+          "from": "4/10/2023",
+          "to": "24/10/2023",
+          "required": true
+        },
+        {
+          "task": "PRA 1",
+          "from": "25/10/2023",
+          "to": "21/11/2023",
           "required": true
         },
         {
           "task": "PAC 2",
-          "from": "14/11/2022",
-          "to": "30/11/2022",
+          "from": "22/10/2023",
+          "to": "12/12/2023",
           "required": true
         },
         {
-          "task": "Pràctica 1 - Selecció d'un conjunt de dades",
-          "from": "28/11/2022",
-          "to": "14/12/2022",
+          "task": "PRA 2",
+          "from": "13/12/2023",
+          "to": "9/12/2024",
+          "required": true
+        }
+      ]
+    },
+    {
+      "abr": "IE",
+      "name": "Iniciativa Emprenedora",
+      "colorScheme": "pink",
+      "color": "danger",
+      "items": [
+        {
+          "task": "Repte 1",
+          "from": "2/10/2023",
+          "to": "16/10/2023",
           "required": true
         },
         {
-          "task": "PAC 3",
-          "from": "09/12/2022",
-          "to": "22/12/2022",
+          "task": "Repte 2",
+          "from": "17/10/2023",
+          "to": "13/11/2023",
           "required": true
         },
         {
-          "task": "Pràctica 2 - Projecte de mineria de dades",
-          "from": "23/12/2022",
-          "to": "25/01/2023",
+          "task": "Repte 3",
+          "from": "14/11/2023",
+          "to": "11/12/2023",
           "required": true
         },
         {
-          "task": "Introducció",
-          "from": "28/09/2022",
-          "to": "02/10/2022"
+          "task": "Repte 4",
+          "from": "12/12/2023",
+          "to": "10/1/2024",
+          "required": true
         },
         {
-          "task": "El procés de mineria de dades",
-          "from": "03/10/2022",
-          "to": "16/10/2022"
-        },
-        {
-          "task": "Preprocessat de les dades i gestió de característiques",
-          "from": "17/10/2022",
-          "to": "30/10/2022"
-        },
-        {
-          "task": "Creació i avaluació de models no supervisats",
-          "from": "07/11/2022",
-          "to": "20/11/2022"
-        },
-        {
-          "task": "Creació i avaluació de models supervisats",
-          "from": "28/11/2022",
-          "to": "11/12/2022"
-        },
-        {
-          "task": "Exemple: cas pràctic",
-          "from": "17/10/2022",
-          "to": "11/12/2022"
+          "task": "Repte 5",
+          "from": "11/1/2024",
+          "to": "24/1/2024",
+          "required": true
         }
       ]
     }

@@ -1,6 +1,7 @@
-import React from "react";
-import {Event, Subject} from "../interfaces/Schedule";
-import {diffDates, fromUniversityToUTC, getNumberOfDays} from "../helpers/dates";
+import React from 'react'
+import {Event, Subject} from '../interfaces/Schedule'
+import {diffDates, getNumberOfDays} from '../helpers/dates'
+import {Badge, Card, CardBody, HStack, Progress, Text, VStack} from '@chakra-ui/react'
 
 interface Props {
     subject?: Subject
@@ -13,38 +14,29 @@ const TaskComponent = (props: Props) => {
     const now = new Date()
     const to = new Date(task.to)
     const from = new Date(task.from)
-    to.setDate(to.getDate() + 1);
+    to.setDate(to.getDate() + 1)
     const nowToTo = diffDates(now, to)
     const toToFrom = diffDates(from, to)
     const progress = Math.trunc((toToFrom - nowToTo) / toToFrom * 100)
     const timeFromBeginning = getNumberOfDays(from, to)
     const timeToEnd = getNumberOfDays(currentTime, to)
-    const background = (subject && subject.class) ?? ''
     return (
-        <div className={`p-0`} style={{order: Math.ceil(100 - progress)}}>
-            <div className={`rounded ${background} p-1 m-1`}>
-                <div className={`card p-1`}>
-                    <div className={`row`} style={{fontSize: '0.9em'}}>
-                        <div className={`col-9  col-sm-8 d-flex flex-column justify-content-end`}>
-                            <span className={"text-truncate"}>{task.task}</span>
-                            <div className="progress">
-                                <div
-                                    className={`progress-bar progress-bar-striped ${background}`}
-                                    role="progressbar" style={{width: `${progress}%`}}/>
-                            </div>
-                        </div>
-                        <div className={`col-3 col-sm-4 d-flex flex-column justify-content-end`}>
-                            <div>
-                                <small>{from.getUTCDate()}/{from.getUTCMonth()}</small> - <small>{to.getUTCDate()}/{to.getUTCMonth()}</small>
-                            </div>
-                            <span
-                                className={'badge bg-secondary'}>{timeToEnd}/{timeFromBeginning}</span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Card>
+            <CardBody p={1}>
+                <VStack order={Math.ceil(100 - progress)} align={'stretch'}>
+                    <HStack justify={'space-between'}>
+                        <span className={'text-truncate'}>{task.task}</span>
+                        <HStack>
+                            <Text m={0}>{from.getUTCDate()}/{from.getUTCMonth()}</Text>
+                            <Text m={0} fontWeight={'bold'}>-</Text>
+                            <Text m={0}>{to.getUTCDate()}/{to.getUTCMonth()}</Text>
+                            <Badge>{timeToEnd}/{timeFromBeginning}</Badge>
+                        </HStack>
+                    </HStack>
+                    <Progress colorScheme={subject.colorScheme} size='lg' value={progress} />
+                </VStack>
+            </CardBody>
+        </Card>
     )
 }
 export default TaskComponent
