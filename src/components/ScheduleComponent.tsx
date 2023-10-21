@@ -27,7 +27,7 @@ const ScheduleComponent = (props: Props) => {
                     date.setDate(date.getDate() + 1)
                     return (
                         <div key={dia} style={{fontFamily: ''}}
-                             className={'border-bottom border-dark fs-4 text-center'}>
+                             className={'border-bottom border-dark fs-6 text-center'}>
                             <span className={'d-none d-md-block'}>
                                 {date.toLocaleDateString('es-ES', {weekday: 'long'})}
                             </span>

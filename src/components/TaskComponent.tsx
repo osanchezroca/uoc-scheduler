@@ -2,6 +2,7 @@ import React from 'react'
 import {Event, Subject} from '../interfaces/Schedule'
 import {diffDates, getNumberOfDays} from '../helpers/dates'
 import {Badge, Card, CardBody, HStack, Progress, Text, VStack} from '@chakra-ui/react'
+import {encodeSomething} from '../helpers/encoding'
 
 interface Props {
     subject?: Subject
@@ -20,8 +21,17 @@ const TaskComponent = (props: Props) => {
     const progress = Math.trunc((toToFrom - nowToTo) / toToFrom * 100)
     const timeFromBeginning = getNumberOfDays(from, to)
     const timeToEnd = getNumberOfDays(currentTime, to)
+    const codeId = encodeSomething(Object.assign({}, task, {subject: undefined}))
+    const onClickAnchor = () => {
+        document
+            .getElementById(codeId)
+            .scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            })
+    }
     return (
-        <Card>
+        <Card onClick={() => onClickAnchor()}>
             <CardBody p={1}>
                 <VStack order={Math.ceil(100 - progress)} align={'stretch'}>
                     <HStack justify={'space-between'}>
