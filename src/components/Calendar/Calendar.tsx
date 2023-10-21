@@ -1,8 +1,8 @@
 import DayCell from "./DayCell";
 import React from "react";
-import {Subject} from "../interfaces/Schedule";
+import {Subject} from "../../interfaces/Schedule";
 import {isFirstDayOfMonth} from 'date-fns'
-import MonthInfoComponent from "./MonthInfoComponent";
+import MonthHeader from "./MonthHeader";
 import {Box, SimpleGrid} from '@chakra-ui/react'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
     currentTime: Date
 }
 
-const ScheduleComponent = (props: Props) => {
+const Calendar = (props: Props) => {
     const {subjects, currentTime} = props
     let weeksLength = 19;
     const semesterStartDate = new Date('2023-9-24')
@@ -51,7 +51,7 @@ const ScheduleComponent = (props: Props) => {
                                             <div style={{
                                                 gridColumn: 'span 7'
                                             }}>
-                                                <MonthInfoComponent subjects={subjects} currentDate={currentDate}/>
+                                                <MonthHeader subjects={subjects} currentDate={currentDate}/>
                                             </div>
                                         </> : null}
 
@@ -71,4 +71,4 @@ const ScheduleComponent = (props: Props) => {
         </>
     )
 }
-export default ScheduleComponent
+export default Calendar

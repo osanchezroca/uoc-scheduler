@@ -1,6 +1,6 @@
-import {Subject} from '../interfaces/Schedule'
+import {Subject} from '../../interfaces/Schedule'
 import React, {useEffect, useRef} from 'react'
-import {compateTwoDates} from '../helpers/dates'
+import {compateTwoDates} from '../../helpers/dates'
 import {TaskPill} from './TaskPill'
 import {Box, HStack, VStack} from '@chakra-ui/react'
 
@@ -56,7 +56,8 @@ const DayCell = (props: Props) => {
         >
             <VStack justify={'start'} align={'stretch'} p={1}>
                 <HStack justify={'space-between'}>
-                    <Box>{cellDay.getDate() === 1 ? cellDay.toLocaleDateString('es-ES', {month: 'long'}) : null}</Box>
+                    <Box/>
+                    {/*<Box>{cellDay.getDate() === 1 ? cellDay.toLocaleDateString('es-ES', {month: 'long'}) : null}</Box>*/}
                     <Box fontFamily='Comic Sans MS'
                          color='rgb(0, 0, 120)'
                          textShadow='0 0 1px gray'

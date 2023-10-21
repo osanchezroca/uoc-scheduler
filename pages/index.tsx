@@ -1,7 +1,7 @@
 import {useEffect, useMemo, useState} from 'react'
 import * as jsonSchedule from '../src/config/database.json'
-import ScheduleComponent from '../src/components/ScheduleComponent'
-import InProgressComponent from '../src/components/InProgressComponent'
+import Calendar from '../src/components/Calendar/Calendar'
+import Navigation from '../src/components/Navigation/Navigation'
 import {isSameMonth, isSameYear} from 'date-fns'
 import {fromUniversityToUTC} from '../src/helpers/dates'
 
@@ -40,7 +40,7 @@ function Index() {
                 {/*</div>*/}
                 <div className={'container-lg p-0'}>
                     {useMemo(() =>
-                            <ScheduleComponent currentTime={date} subjects={schedule.subjects} />,
+                            <Calendar currentTime={date} subjects={schedule.subjects} />,
                         [date.getUTCDate()])}
                 </div>
                 <div className={'rounded d-flex flex-column'}
@@ -48,7 +48,7 @@ function Index() {
                          bottom: 0, backgroundColor: '', backdropFilter: 'blur(2px)', position: 'sticky', zIndex: 1020
                      }}>
                     <div className={'container-lg p-0'}>
-                        <InProgressComponent currentTime={date} subjects={schedule.subjects} />
+                        <Navigation currentTime={date} subjects={schedule.subjects} />
                     </div>
                 </div>
             </div>

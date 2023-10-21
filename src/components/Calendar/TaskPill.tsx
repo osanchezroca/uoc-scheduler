@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import {encodeSomething} from '../helpers/encoding'
-import {compateTwoDates} from '../helpers/dates'
+import {encodeSomething} from '../../helpers/encoding'
+import {compateTwoDates} from '../../helpers/dates'
 import {
     Button,
     ButtonGroup,

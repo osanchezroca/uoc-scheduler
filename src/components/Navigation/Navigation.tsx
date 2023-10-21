@@ -1,8 +1,8 @@
 import {useState} from 'react'
-import {Subject} from '../interfaces/Schedule'
-import TaskComponent from './TaskComponent'
-import {encodeSomething} from '../helpers/encoding'
-import {diffDates} from '../helpers/dates'
+import {Subject} from '../../interfaces/Schedule'
+import TaskProgress from './TaskProgress'
+import {encodeSomething} from '../../helpers/encoding'
+import {diffDates} from '../../helpers/dates'
 import {Box, Button, HStack, SimpleGrid} from '@chakra-ui/react'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
     currentTime: Date
 }
 
-const InProgressComponent = (props: Props) => {
+const Navigation = (props: Props) => {
     const {subjects, currentTime} = props
     const [filter, setFilter] = useState<string | null>(null)
     const selectFilter = (name: string) => {
@@ -54,7 +54,7 @@ const InProgressComponent = (props: Props) => {
                     )
                     .map((item, i) => (
                         <Box key={i} onClick={() => goTo(item)} cursor={'pointer'}>
-                            <TaskComponent subject={item.subject} currentTime={currentTime} task={item} />
+                            <TaskProgress subject={item.subject} currentTime={currentTime} task={item} />
                         </Box>
                     ))}
             </SimpleGrid>
@@ -69,6 +69,7 @@ const InProgressComponent = (props: Props) => {
                         {subjects.map((subject, i) => (
                             <Button
                                 key={i}
+                                isActive={subject.name === filter}
                                 colorScheme={subject.colorScheme}
                                 onClick={() => selectFilter(subject.name)}
                             >{subject.abr}</Button>
@@ -79,4 +80,4 @@ const InProgressComponent = (props: Props) => {
         </>
     )
 }
-export default InProgressComponent
+export default Navigation

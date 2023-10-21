@@ -1,5 +1,5 @@
 import React from 'react'
-import {Subject} from '../interfaces/Schedule'
+import {Subject} from '../../interfaces/Schedule'
 import {isSameMonth, isSameYear} from 'date-fns'
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
     currentDate: Date
 }
 
-const MonthInfoComponent = (props: Props) => {
+const MonthHeader = (props: Props) => {
     const {subjects, currentDate} = props
     const filteredSubjects = subjects.map(subject => Object.assign({}, subject, {items: subject.items.filter(item => isSameMonth(new Date(item.from), currentDate) && isSameYear(new Date(item.from), currentDate) || isSameMonth(new Date(item.to), currentDate) && isSameYear(new Date(item.to), currentDate))}))
     return <div className={'d-flex justify-content-between align-items-center'}>
@@ -17,4 +17,4 @@ const MonthInfoComponent = (props: Props) => {
     </div>
 
 }
-export default MonthInfoComponent
+export default MonthHeader
