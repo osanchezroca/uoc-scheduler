@@ -22,6 +22,7 @@ const TaskComponent = (props: Props) => {
     const timeFromBeginning = getNumberOfDays(from, to)
     const timeToEnd = getNumberOfDays(currentTime, to)
     const codeId = encodeSomething(Object.assign({}, task, {subject: undefined}))
+    const isToggledAtLocalStorage = localStorage.getItem(codeId)
     const onClickAnchor = () => {
         document
             .getElementById(codeId)
@@ -31,19 +32,21 @@ const TaskComponent = (props: Props) => {
             })
     }
     return (
-        <Card onClick={() => onClickAnchor()}>
-            <CardBody p={1}>
+        <Card onClick={() => onClickAnchor()}
+              border={isToggledAtLocalStorage?'2px green solid':'2px gray dashed'}
+              backgroundColor={isToggledAtLocalStorage?'green.50':'gray.50'}>
+            <CardBody p={1} fontSize={'sm'}>
                 <VStack order={Math.ceil(100 - progress)} align={'stretch'}>
                     <HStack justify={'space-between'}>
                         <span className={'text-truncate'}>{task.task}</span>
                         <HStack>
-                            <Text m={0}>{from.getUTCDate()}/{from.getUTCMonth()}</Text>
-                            <Text m={0} fontWeight={'bold'}>-</Text>
-                            <Text m={0}>{to.getUTCDate()}/{to.getUTCMonth()}</Text>
-                            <Badge>{timeToEnd}/{timeFromBeginning}</Badge>
+                            <Text m={0} fontSize={'xs'}>Desde {from.getUTCDate()}/{from.getUTCMonth() + 1}</Text>
+                            <Text m={0} fontWeight={'bold'}>Hasta {to.getUTCDate() - 1}/{to.getUTCMonth() + 1}</Text>
+                            <Badge>Quedan {timeToEnd} dias</Badge>
+                            <Text m={0} fontSize={'xs'}>de {timeFromBeginning}</Text>
                         </HStack>
                     </HStack>
-                    <Progress colorScheme={subject.colorScheme} size='lg' value={progress} />
+                    <Progress colorScheme={subject.colorScheme} size='xs' value={progress} />
                 </VStack>
             </CardBody>
         </Card>

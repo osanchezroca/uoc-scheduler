@@ -14,7 +14,7 @@ const ScheduleComponent = (props: Props) => {
     const {subjects, currentTime} = props
     let weeksLength = 19;
     const semesterStartDate = new Date('2023-9-24')
-    const date = new Date('2023-9-24')
+    const startWeekDate = new Date('2023-9-24')
     return (
         <>
             <div className="sticky-top" style={{
@@ -24,15 +24,15 @@ const ScheduleComponent = (props: Props) => {
                 gridTemplateColumns: 'repeat(7, minmax(0, 1fr))'
             }}>
                 {[...Array(7)].map((_, dia) => {
-                    date.setDate(date.getDate() + 1)
+                    startWeekDate.setDate(startWeekDate.getDate() + 1)
                     return (
                         <div key={dia} style={{fontFamily: ''}}
                              className={'border-bottom border-dark fs-6 text-center'}>
                             <span className={'d-none d-md-block'}>
-                                {date.toLocaleDateString('es-ES', {weekday: 'long'})}
+                                {startWeekDate.toLocaleDateString('es-ES', {weekday: 'long'})}
                             </span>
                             <span className={'d-block d-md-none'}>
-                                {date.toLocaleDateString('es-ES', {weekday: 'short'})}
+                                {startWeekDate.toLocaleDateString('es-ES', {weekday: 'short'})}
                             </span>
                         </div>
                     );

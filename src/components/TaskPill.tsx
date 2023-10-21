@@ -67,7 +67,7 @@ export const TaskPill = (props: any) => {
         <Popover>
             <PopoverTrigger>
                 <ButtonGroup gap={0} {...stylePill} borderY={'2px'} w={'100%'}
-                             borderColor={isToggledAtLocalStorage ? 'white' : 'black'}
+                             borderColor={isToggledAtLocalStorage ? 'white' : 'gray'}
                              borderStyle={isToggledAtLocalStorage ? 'solid' : 'dashed'}>
 
                     <Button
